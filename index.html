@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-bottom">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#download">Download</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="assets/header-image.png" class="img-fluid"></img>
+      </div>
+      <div class="col-md-6" style="padding: 8% 0">
+        <h1 class="display-2">MiniMaple</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <h1 class="display-3">Download</h1>
+    <div class="row">
+      <div class="col-md-4 offset-md-3">
+        <h1 class="display-5">Setup</h1>
+        <p>Need the full files for MiniMaple?</p>
+        <ul class="text-muted">
+          <li><a href="#">Direct Download</a></li>
+          <li><a href="#">Google Drive</a></li>
+        </ul>
+
+        <h1 class="display-5">Client</h1>
+        <p>Just need the client to play?</p>
+        <ul class="text-muted">
+          <li><a href="#">Direct Download</a></li>
+          <li><a href="#">Google Drive</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <img src="assets/download-image.png" class="img-fluid" style="height: 80%"></img>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-text">
+      <p>Made with <i class="fa fa fa-heart" aria-hidden="true" style="color: pink"></i> by <a href="https://github.com/kaioru" target="_blank">Kaioru.</a></p>
+      <p class="text-muted">All images and other content related to MapleStory are owned by Nexon Corp.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').animate({
+          'scrollTop': $target.offset().top
+        }, 600, 'swing', function() {
+          window.location.hash = target;
+        });
+      });
+    });
+  </script>
+</body>
