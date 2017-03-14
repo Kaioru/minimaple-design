@@ -24,6 +24,14 @@
           <a class="nav-link" href="#download">Download</a>
         </li>
       </ul>
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+          <a data-toggle="modal" data-target="#vote-modal" class="nav-link">Vote</a>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="modal" data-target="#login-modal" class="nav-link">Login</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
@@ -95,6 +103,98 @@
       </div>
     </div>
   </section>
+
+  <div class="modal fade" id="vote-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Vote</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="voteUsername" placeholder="Username">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="voteRadios" id="voteRadios1" value="gtop100" checked>
+                GTOP100
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="voteRadios" id="voteRadios2" value="ultimateprivateservers">
+                Ultimate Private Servers
+              </label>
+            </div>
+          </form>
+          <small>You will be awarded with 1,000 MaplePoints upon successful vote.</small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="login-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="loginUsername" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+            </div>
+          </form>
+          <small>Don't have an account? <a data-toggle="modal" data-target="#register-modal" href="#">Register now!</a></small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="register-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="registerUsername" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="registerPassword2" placeholder="Confirm Password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-text">
